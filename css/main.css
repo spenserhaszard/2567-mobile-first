@@ -10,7 +10,7 @@ body {
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
 }
-h1 {
+h1, h2 {
 	text-align: center;
 }
 .wrapper {
@@ -47,19 +47,28 @@ img {
 }
 
 .black {
-	background-color: #46454a;
-	height: 50px;
+	background-color: #394754;
+	min-height: 50px;
+}
+.red {
+	background-color: #ed2431;
+	min-height: 50px;
+}
+.light {
+	background-color: grey;
+	min-height: 50px;
+}
+.green {
+	background-color: #00b1ab;
+	min-height: 50px;
 }
 /* ***********************************
 			BOXES
  ************************************* */
- #logo {
-	 width: 203px;
-	 height: 76px;
- }
- #nav {
-	 padding: 30px;
- }
+.col-center {
+	float: none;
+	margin: 0 auto;
+}
  
 /* ***********************************
 			Columns
@@ -147,6 +156,16 @@ img {
 
 
  
+ 
+ .pull-right {
+	 float: right;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
 
 /* @Media */
 @media (max-width: 480px) {
@@ -155,7 +174,6 @@ img {
 	}
 	.wrapper {
 		width: 95%;
-		background-color: #f7f8f8;
 	}
 	.col-1-4.col-sm, .col-1-8.col-sm {
 		width: 25%;
