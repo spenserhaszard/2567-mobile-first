@@ -34,51 +34,59 @@
 body {
 	background-color: #f7f8f8;
 	color: #46454a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 }
 * {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
+	 -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
   /* 1.2 - Body Copy */
-h1, h2 {
+h1, h2, .btn {
   text-align: center;
+}
+h1, h2, h3, h3, h4, #hero p:first-child, .btn, li {
   text-transform: uppercase;
 }
-h1, h2, h3, h3, h4 {
-  text-transform: uppercase;
-}
-h2 {
-  font-weight: 3.000em;
+h2, h3 {
+  font-weight: 700;
 }
 h4 {
-	font-size: 3.000em;
 	margin: 0;
 }
-
-#hero p:first-child {
-	text-transform: uppercase;
-	font-size: 3.750em;
-	font-weight: bold;
+#hero p, .btn-primary, li a, .team, body > footer {
 	color: #fff;
+}
+#hero p {
+    margin-bottom: 50px;
+    font-size: 1.5em;
+}
+#hero p:first-child {
+	font-size: 3.750em;
+	font-weight: 700;
 	margin: 200px 0 16px 0;
 }
   /* 1.3 - Buttons */
 .team ul {
-	margin: 0;
+	padding-left: 0;
 }
-a .btn {
-	padding: 12px 0;
-	text-align: center;
-	font-size: 0.949em;
+.btn {
+	padding: 14px;
+	font-size: 1.25em;
+	text-decoration: none;
 }
-.btn-primary {
-	background-color: #00b1ab;
+.btn-secondary {
+	background-color: #fff;
+	color: #394754;
+	}
+	
+.btn-primary:hover, .btn-secondary:hover {
+	background-color: #00d4c7;
+	color: #394754;
 }
 a:hover.btn {
 	border: none;
@@ -91,10 +99,8 @@ ul {
 li {
   display: inline;
   margin-right: 20px;
-  text-transform: uppercase;
 }
 li a {
-	color: #fff;
 	text-decoration: none;
 	border-bottom: 2px solid transparent;
 	 vertical-align:-32px;
@@ -104,6 +110,9 @@ li a:hover {
 }
 li:last-child {
 	margin: 0;
+}
+footer li a{
+  font-size: 15px;
 }
   /* 1.6 - Tables */
   
@@ -137,81 +146,16 @@ li:last-child {
 [class*="col-"]:last-of-type {
 	padding-right: 0;
 }
-.col-center {
-	float: none;
-	margin: 0 auto;
-}
 body > header {
 	position: fixed;
 	width: 100%;
+	top: 0;
+	left: 0;
 }
-#hero {
-	padding-bottom: 100px;
-	background-image: url("../img/hero-bg.jpg");
-	background-size: cover;
-}
-#john-doe {
-	background-image: url("../img/john-2.jpg");
-	background-size: cover;
-	padding: 60px;
-}
-#jane-smith {
-	background-image: url("../img/jane-smith.jpg");
-	background-size: cover;
-	padding: 60px;
-}
-#mary-smith {
-	background-image: url("../img/mary-smith.jpg");
-	background-size: cover;
-	padding: 60px;
-}
-.team {
-	color: #fff;
-}
-  /* 3.2 - Section Name */
-  /* 3.3 - Section Name */
-/*--------------------------------------------------------------
-4.0 - Media
--------------------------------------------------------------- */
-img {
-	width: 100%;
-}
-body > header img {
-	width: 70%;
-}
-/*--------------------------------------------------------------
-5.0 - Utility
--------------------------------------------------------------- */
-  /* 5.1 - Background Colors */
-.white {
-	background-color: #fff;
-}
-.black {
-	background-color: #394754;
-	min-height: 50px;
-}
-.red {
-	background-color: #ed2431;
-	min-height: 50px;
-}
-.light {
-	background-color: grey;
-	min-height: 50px;
-}
-.green {
-	background-color: #00b1ab;
-	min-height: 50px;
-}
-  /* 5.2 - Text Colors */
-  /* 5.3 - Text Sizes */
-  /* 5.4 - Alignments */
-  
-/*--------------------------------------------------------------
-6.0 - Misc Junk here
--------------------------------------------------------------- */
 
-
-
+.padding-btm {
+	padding-bottom: 20px;
+}
 /* ***********************************
 			RESPONVSIVE GRID MAGIC
  ************************************* */
@@ -300,14 +244,84 @@ body > header img {
 .col-11-12 {
 	width: 91.66%;
 }
-
-
- 
  
  .pull-right {
 	 float: right;
  }
- 
+/*--------------------------------------------------------------
+4.0 - Media
+-------------------------------------------------------------- */
+img {
+	width: 100%;
+}
+body > header img {
+	width: 70%;
+}
+body > footer img {
+	width: 60%;
+	margin-top: 30px;
+}
+#hero {
+	padding-bottom: 100px;
+	background-image: url("../img/hero-bg.jpg");
+	margin-top: 112px;
+}
+#john-doe {
+	background-image: url("../img/john-2.jpg");
+}
+#jane-doe {
+	background-image: url("../img/jane-smith.jpg");
+}
+#mary-smith {
+	background-image: url("../img/mary-smith.jpg");
+}
+#jon-smith {
+	background-image: url("../img/jon-smith.jpg");
+}
+#john-doe, #jane-doe, #mary-smith, #jon-smith, #hero {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+}
+#john-doe, #jane-doe, #mary-smith, #jon-smith {
+	padding: 60px;
+}
+/*--------------------------------------------------------------
+5.0 - Utility
+-------------------------------------------------------------- */
+  /* 5.1 - Background Colors */
+.white {
+	background-color: #fff;
+}
+.black {
+	background-color: #394754;
+	min-height: 50px;
+}
+.red {
+	background-color: #ed2431;
+	min-height: 50px;
+}
+.light {
+	background-color: grey;
+	min-height: 50px;
+}
+.green, .btn-primary {
+	background-color: #00b1ab;
+	min-height: 50px;
+}
+body > footer {
+	padding: 30px;
+}
+.col-center {
+	float: none;
+	margin: 0 auto;
+}
+  /* 5.2 - Text Colors */
+  /* 5.3 - Text Sizes */
+  /* 5.4 - Alignments */
+  
 
 
 
@@ -316,9 +330,53 @@ body > header img {
 -------------------------------------------------------------- */
 /* @Media */
 @media (max-width: 480px) {
-	.black {
-		background-color: #46454a;
+	
+/*--------------------------------------------------------------
+0.0 - Target All/General Styls
+-------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */
+  /* 1.2 - Body Copy */
+	#hero, #hero p {
+		text-align:  center;
+		font-size: 1.0em;
 	}
+	footer p, body > footer .col-1-4 {
+		text-align: center;
+	}
+	p {
+		line-height: 1.5em;
+	}
+  /* 1.3 - Buttons */
+	li a {
+		vertical-align: 0;
+	}
+	.btn {
+		padding: 10px;
+		font-size: 1.0em;
+	}  /* 1.4 - Forms */
+  /* 1.5 - Lists */
+	ul {
+		padding: 0;
+		text-align: center;
+	}
+
+	.team ul {
+		text-align: left;
+	}
+  /* 1.6 - Tables */
+  
+/*--------------------------------------------------------------
+2.0 - Navigation Menus
+-------------------------------------------------------------- */
+  /* 3.2 - Sub Menu */
+  /* 3.3 - Footer Menu */
+/*--------------------------------------------------------------
+3.0 - Content
+-------------------------------------------------------------- */
+  /* 3.1 - Site Structure (Site Header, Advertisement, Site Footer) */
 	.wrapper {
 		width: 95%;
 	}
@@ -344,7 +402,7 @@ body > header img {
 		padding-right: 0;
 	}
 	#work .col-1-4 {
-		min-height: 285px;
+		min-height: 300px;
 	}
 	#logo {
 		float: none;
@@ -353,11 +411,52 @@ body > header img {
 	nav.col-1-3 {
 		width: 100%;
 	}
+	.col-2-3 {
+		width: 100%;
+	}
+	body > footer .col-1-4 {
+		width: 70%;
+	}
 	nav ul.pull-right {
 		float: none;
 	}
-	#mary-smith {
-		background-size: cover;
-		background-position: right;
+	footer .col-1-4, footer .pull-right {
+		float: none;
+		margin: 0 auto;
 	}
+
+	.team .col-1-2 {
+		width: 100%;
+	}
+/*--------------------------------------------------------------
+4.0 - Media
+-------------------------------------------------------------- */
+	body > footer img {
+		width: 60%;
+		float: none;
+		margin: 0 auto;
+	}
+	#john-doe, #jane-doe, #mary-smith, #jon-smith {
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		-ms-background-size: cover;
+		background-size: cover;
+		background-position: 515px;
+	}
+/*--------------------------------------------------------------
+5.0 - Utility
+-------------------------------------------------------------- */
+  /* 5.1 - Background Colors */
+	.black {
+		background-color: #46454a;
+	}
+  /* 5.2 - Text Colors */
+  /* 5.3 - Text Sizes */
+  /* 5.4 - Alignments */
+  
+/*--------------------------------------------------------------
+6.0 - Misc Junk here
+-------------------------------------------------------------- */
+
 }

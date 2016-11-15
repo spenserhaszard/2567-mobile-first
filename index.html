@@ -1,14 +1,15 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>Pixel Design Studios</title>
 </head>
-<!-- this is a comment -->
+
 <body>
 <!-- Navigation bar -->
   <header class="green">
@@ -16,7 +17,7 @@
         <div class="row">
           <div id="logo" class="col-1-4">
             <h1>
-            <a href="">
+            <a href="#">
               <img src="img/logo.png" alt="Pixel Design Studios">
             </a>
             </h1>
@@ -24,9 +25,9 @@
           <nav class="col-1-3 pull-right">
             <div>
               <ul class="pull-right">
-                <li><a href="#">home</a></li>
+                <li><a href="#hero">home</a></li>
                 <li><a href="#work">work</a></li>
-                <li><a href="#">about</a></li>
+                <li><a href="#about">about</a></li>
               </ul>
             </div>
           </nav>
@@ -38,10 +39,12 @@
 <div id="hero" class="light">
   <div class="wrapper">
     <div class="row">
-      <div class="col-2-3">
+      <div class="col-2-3 padding-btm">
         <div>
           <p>we design things</p>
           <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu. Aliquid delenit an pri, ad mea nostrud nominavi menandri.</p>
+          <a href="#hire" class="btn btn-primary pull-left">hire us</a>
+          <a href="#work" class="btn btn-secondary pull-left">view work</a>
         </div>
       </div>
     </div>
@@ -49,46 +52,59 @@
 </div>
 
  <!-- Work section -->
-  <div id="work" class="wrapper">
-    <h2>work</h2>
+  <div class="wrapper">
+	<section id="work" >
+    <header>
+    	<h2>work</h2>
+    </header>
     <div class="row">
       <div class="col-1-4">
         <div>
-        <img src="img/icon.jpg" alt="">
-        <h3>print design</h3>
+        <img src="img/print-design-icon.png" alt="">
+        <header>
+        	<h3>print design</h3>
+        </header>
         <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu. Aliquid delenit an pri, ad mea nostrud nominavi menandri.</p>
         </div>
       </div>
       <div class="col-1-4">
         <div>
-        <img src="img/icon.jpg" alt="">
-        <h3>interactive</h3>
+        <img src="img/interactive-icon.png" alt="">
+        <header>
+			<h3>interactive</h3>
+        </header>
         <p>Vix ad posse impetus, vis id quem nobis suscipiantur. His an assum omnium periculis. </p>
         </div>
       </div>
       <div class="col-1-4">
         <div>
-        <img src="img/icon.jpg" alt="">
-        <h3>app design</h3>
+        <img src="img/app-icon.png" alt="">
+        <header>
+        	<h3>app design</h3>
+        </header>
         <p>Exerci antiopam constituam per ex, pro odio enim te, ut eam quidam docendi ancillae. Id nisl appareat mel.</p>
         </div>
       </div>
       <div class="col-1-4">
         <div>
-        <img src="img/icon.jpg" alt="">
-        <h3>branding</h3>
+        <img src="img/branding-icon.png" alt="">
+        <header>
+        	<h3>branding</h3>
+        </header>
         <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu.</p>
         </div>
       </div>
     </div>
-
+</section>
 
  <!-- Our Team section -->
-<div>
+<section id="about">
     <div class="row">
       <div class="col-2-3 col-center">
         <div>
-          <h2>our team</h2>
+         <header>
+         	<h2>our team</h2>
+         </header>
           <p>Ea expetenda prodesset cum, tibique principes laboramus id pro. Ei dolorem facilis volutpat sed, eu pro dicta iracundia scripserit. Vel singulis posidonium ea, primis possim voluptatum ei has. Ut usu sale modus liberavisse. Eos reque mnesarchum ea, ea tamquam disputando has.</p>
         </div>
       </div>
@@ -99,25 +115,29 @@
     <div class="row">
       <div class="col-1-2">
         <div>
-          <h4>John Doe</h4>
+         <header>
+         	<h4>John Doe</h4>
+         </header>
           <p>Nam purto solet eu, vero mediocrem hendrerit ad ius. </p>
           <ul>
-            <li><a href="#" class="btn btn-primary">facebook</a></li>
-            <li><a href="#">twitter</a></li>
+            <li><a href="#hero" class="btn btn-primary">facebook</a></li>
+            <li><a href="#hero" class="btn btn-primary">twitter</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  <div id="jane-smith" class="team">
+  <div id="jane-doe" class="team">
     <div class="row">
       <div class="col-1-2">
         <div>
-          <h4>Jane Doe</h4>
+         <header>
+         	<h4>Jane Doe</h4>
+         </header>
           <p>Vix ad posse impetus, vis id quem nobis suscipiantur. His an assum omnium periculis.</p>
           <ul>
-            <li><a href="#">facebook</a></li>
-            <li><a href="#">twitter</a></li>
+            <li><a href="#hero" class="btn btn-primary">facebook</a></li>
+            <li><a href="#hero" class="btn btn-primary">twitter</a></li>
           </ul>
         </div>
       </div>
@@ -127,47 +147,56 @@
     <div class="row">
       <div class="col-1-2">
         <div>
-          <h4>mary smith</h4>
+         <header>
+         	<h4>mary smith</h4>
+         </header>
           <p>Exerci antiopam constituam per ex, pro odio enim te, ut eam quidam docendi ancillae. Id nisl appareat mel.</p>
           <ul>
-            <li><a href="#">facebook</a></li>
-            <li><a href="#">twitter</a></li>
+            <li><a href="#hero" class="btn btn-primary">facebook</a></li>
+            <li><a href="#hero" class="btn btn-primary">twitter</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  <div id="jane-smith" class="team">
+  <div id="jon-smith" class="team">
     <div class="row">
       <div class="col-1-2">
         <div>
-          <h4>jon smith</h4>
+         <header>
+         	<h4>jon smith</h4>
+         </header>
           <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu.</p>
           <ul>
-            <li><a href="#">facebook</a></li>
-            <li><a href="#">twitter</a></li>
+            <li><a href="#hero" class="btn btn-primary">facebook</a></li>
+            <li><a href="#hero" class="btn btn-primary">twitter</a></li>
           </ul>
         </div>
       </div>
     </div>
-  </div></div> <!-- end our team -->
+  </div>
+  </section> <!-- end our team -->
 </div>
 <!-- footer -->
-  <div class="black">
+<footer class="black">
     <div class="wrapper">
-        <div class="row">
+        <div class="row padding-btm">
           <div class="col-1-4">
-            <div class="red"></div>
+         <img src="img/logo.png" alt="Pixel Design Studios">
           </div>
           <div class="col-1-4">
-            <div class="red"></div>
+          <ul>
+          <li><a href="#hero">home</a></li>
+          <li><a href="#work">work</a></li>
+          <li><a href="#about">about</a></li>
+          </ul>
           </div>
           <div class="col-1-6 pull-right">
-            <div class="red"></div>
+            <p class="pull-right">6041 Old York Road<br>Dekalb, IL 60115</p>
           </div>
         </div>
     </div>
-  </div>
+  </footer>
   
 <script type="text/ecmascript">
   $('a[href*="#"]:not([href="#"])').click(function() {
